@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
-    <title>List of Games</title>
+    <title>List of Users</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -57,33 +57,26 @@
     </div>
 
 <div class="container">
-    <div style="text-align: right; margin-bottom: 5px;">
-        <a th:href="@{/admin/game/add}" class="btn btn-success" role="button" th:text="#{addGame}"/>
-    </div>
     <table class="table table-borderless table-dark">
         <thead>
         <tr>
             <th th:text="#{id}"></th>
-            <th th:text="#{title}"></th>
-            <th th:text="#{releaseYear}"></th>
-            <th th:text="#{genre}"></th>
-            <th th:text="#{quiantity}"></th>
-            <th th:text="#{price}"></th>
+            <th th:text="#{firstName}"></th>
+            <th th:text="#{lastName}"></th>
+            <th th:text="#{email}"></th>
+            <th th:text="#{password}"></th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="game : ${games}">
-            <td th:text="${game.idGame}"/>
-            <td th:text="${game.title}"/>
-            <td th:text="${game.releaseYear}"/>
-            <td th:text="${game.genre}"/>
-            <td th:text="${game.quantity}"/>
-            <th th:text="${game.price}"/>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.firstName}"></td>
+            <td th:text="${user.lastName}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.password}"></td>
             <td>
-                <a th:href="@{/admin/game/edit/{id}(id=${game.idGame})}"
-                   class="btn btn-success btn-sm" role="button" th:text="#{update}"/>
-                <a th:href="@{/admin/game/delete/{id}(id=${game.idGame})}"
-                        class="btn btn-danger btn-sm" role="button" th:text="#{delete}"/>
+
+                <a th:href="@{/admin/user/delete/{id}(id=${user.id})}" class="btn btn-danger btn-sm" role="button" th:text="#{delete}"/>
             </td>
         </tr>
         </tbody>
