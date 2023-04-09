@@ -1,6 +1,6 @@
 # IT355-PZ-BojanaStajic4596
 
-Web systems 2 Project Assignment
+IT355 Project Assignment
 
 Topic: Online Video Games Shop (Bojana's Place Games)
 
