@@ -63,8 +63,7 @@
             <th th:text="#{id}"></th>
             <th th:text="#{firstName}"></th>
             <th th:text="#{lastName}"></th>
-            <th th:text="#{email}"></th>
-            <th th:text="#{password}"></th>
+           
         </tr>
         </thead>
         <tbody>
@@ -72,8 +71,7 @@
             <td th:text="${user.id}"></td>
             <td th:text="${user.firstName}"></td>
             <td th:text="${user.lastName}"></td>
-            <td th:text="${user.email}"></td>
-            <td th:text="${user.password}"></td>
+      
             <td>
 
                 <a th:href="@{/admin/user/delete/{id}(id=${user.id})}" class="btn btn-danger btn-sm" role="button" th:text="#{delete}"/>
