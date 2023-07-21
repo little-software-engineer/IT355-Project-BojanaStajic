@@ -27,10 +27,10 @@
                     <a class="nav-link" sec:authorize="isAuthenticated()" href="#" th:href="@{/shop}" th:text="#{shop}">Shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" sec:authorize="isAuthenticated()" href="#" th:href="@{/admin/game/list}" th:text="#{gameList}">Games List</a>
+                    <a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" href="#" th:href="@{/admin/game/list}" th:text="#{gameList}">Games List</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/admin/user/list}" th:text="#{userList}">User List</a>
+                    <a class="nav-link" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/admin/user/list}" th:text="#{userList}">User List</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/logout}" th:text="#{logout}">Logout</a>
