@@ -97,3 +97,24 @@
 .table-overlay th {
     vertical-align: middle;
 }
+
+.form-wrapper {
+    padding-top: 30px;
+    max-width: 700px;
+}
+
+.form-overlay {
+    background: rgba(0,0,0,0.75);
+    border-radius: 10px;
+    color: white;
+}
+
+.admin-page-bg {
+    min-height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/09/5d/0d/095d0d2c652e1a36a49ef5aaeebfe488.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 100px; 
+    padding-bottom: 40px;
+}
